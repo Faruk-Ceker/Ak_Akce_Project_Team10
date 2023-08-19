@@ -4,7 +4,7 @@ import Utility.BaseDriver;
 import Utility.MyFunc;
 import org.junit.Test;
 
-public class US_01 extends BaseDriver {
+public class us_01 extends BaseDriver {
 
     @Test
     public void Test1()
