@@ -45,7 +45,7 @@ public class US_4_cansu extends BaseDriver {
 
         WebElement hesabim=driver.findElement(By.xpath("//a[text()='Hesabım']"));
 
-        Assert.assertTrue("hata",hesabim.getText().contains("Hesabım"));
+        Assert.assertTrue("hata",hesabim.getText().contains("Hesabım")); //Hatalı assert seçimi düzeltildi.
 
         MyFunc.Wait(2);
         BekleVeKapat();
