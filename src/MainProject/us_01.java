@@ -2,6 +2,7 @@ package MainProject;
 
 import Utility.BaseDriver;
 import Utility.MyFunc;
+import org.junit.Assert;
 import org.junit.Test;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
@@ -40,10 +41,10 @@ Doğru bilgiler girilerek hesap oluşturulduğunda, hesap doğrulama sayfasına 
         soyad.sendKeys("cek");
         MyFunc.Wait(1);
         WebElement email = driver.findElement(By.xpath("//input[@id='rnufe1']"));
-        email.sendKeys("cek1@gmail.com");
+        email.sendKeys("cek3@gmail.com");
         MyFunc.Wait(1);
         WebElement emailTekrar = driver.findElement(By.xpath("//input[@id='rnufe2']"));
-        emailTekrar.sendKeys("cek1@gmail.com");
+        emailTekrar.sendKeys("cek3@gmail.com");
         MyFunc.Wait(1);
         WebElement sifre = driver.findElement(By.xpath("//input[@id='rnufp1']"));
         sifre.sendKeys("Far123456");
@@ -92,6 +93,16 @@ Doğru bilgiler girilerek hesap oluşturulduğunda, hesap doğrulama sayfasına 
         sonHesapAc.click();
         MyFunc.Wait(2);
 
+        WebElement hesabim = driver.findElement(By.xpath("//div[@id='HM_v8']"));
+        hesabim.click();
+        MyFunc.Wait(1);
+
+        WebElement merhaba = driver.findElement(By.xpath("//li[@id='HM_p_v8']/a"));
+        merhaba.click();
+        MyFunc.Wait(1);
+
+        WebElement onayYazisi = driver.findElement(By.xpath("//div[@class='my_i']"));
+        Assert.assertTrue("Onaylama yazısı görünmedi",onayYazisi.getText().contains("E-posta adresinizi onaylayın"));
 
 
 
