@@ -116,10 +116,6 @@ public class us_02 extends BaseDriver {
         Actions actions = new Actions(driver);
         actions.moveToElement(hesabim).click().perform();
 
-        //WebElement hesabim = driver.findElement(By.xpath("//a[text()='Hesabım']"));
-        //hesabim.click();
-        //MyFunc.Wait(3);
-
         WebElement emailHesapDog = driver.findElement(By.xpath("//*[contains(text(), 'E-posta adresinizi onaylayın')]"));
         String emailOnay = emailHesapDog.getText();
         System.out.println("emailOnay = " + emailOnay);
@@ -130,22 +126,4 @@ public class us_02 extends BaseDriver {
     }
 }
 
-      // WebElement profil = driver.findElement(By.xpath("//a[@rel='nofollow' and @id='H_a_v8' and @href='/akakcem/' and @title='Hesabım']"));
-      // profil.click();
-      // MyFunc.Wait(3);
 
-      // WebElement hesabim = driver.findElement(By.xpath("//a[@rel='nofollow' and @id='H_a_v8' and @href='/akakcem/' and @title='Hesabım']"));
-      // hesabim.click();
-      // MyFunc.Wait(3);
-
-      // WebElement emailHesapDog = driver.findElement(By.xpath("//*[ contains( text(), 'E-posta adresinizi onaylayın' ) ]"));
-      // String emailOnay = emailHesapDog.getText();
-      // System.out.println("emailOnay = " + emailOnay);
-      // MyFunc.Wait(3);
-      // Assert.assertTrue("Bulunamadı", emailOnay.contains("E-posta adresinizi onaylayın")); // Hata olması durumunda
-
-
-      // BekleVeKapat();
-// }
-
-//}
