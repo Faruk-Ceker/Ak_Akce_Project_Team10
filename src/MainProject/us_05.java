@@ -26,7 +26,7 @@ import org.openqa.selenium.WebElement;
 public class us_05 extends BaseDriver {
 
     @Test
-    public void Us_05Test()
+    public void Test5()
 
     {
 
