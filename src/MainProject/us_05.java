@@ -26,7 +26,7 @@ import org.openqa.selenium.WebElement;
 public class us_05 extends BaseDriver {
 
     @Test
-    public void Test5()
+    public void Test()
 
     {
 
@@ -70,25 +70,6 @@ public class us_05 extends BaseDriver {
         System.out.println(sonuc.getText());
 
         Assert.assertTrue(sonuc.getText().contains("Kayıtlı siparişiniz bulunmuyor."));
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 
