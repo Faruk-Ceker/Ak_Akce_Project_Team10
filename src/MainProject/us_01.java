@@ -35,22 +35,22 @@ Doğru bilgiler girilerek hesap oluşturulduğunda, hesap doğrulama sayfasına 
         hesapAcButton.click();
         MyFunc.Wait(1);
         WebElement ad = driver.findElement(By.xpath("//input[@id='rnufn']"));
-        ad.sendKeys("far");
+        ad.sendKeys("TestUser");
         MyFunc.Wait(1);
         WebElement soyad = driver.findElement(By.xpath("//input[@id='rnufs']"));
-        soyad.sendKeys("cek");
+        soyad.sendKeys("Tester");
         MyFunc.Wait(1);
         WebElement email = driver.findElement(By.xpath("//input[@id='rnufe1']"));
-        email.sendKeys("cek3@gmail.com");
+        email.sendKeys("cek1@example.com");
         MyFunc.Wait(1);
         WebElement emailTekrar = driver.findElement(By.xpath("//input[@id='rnufe2']"));
-        emailTekrar.sendKeys("cek3@gmail.com");
+        emailTekrar.sendKeys("cek1@example.com");
         MyFunc.Wait(1);
         WebElement sifre = driver.findElement(By.xpath("//input[@id='rnufp1']"));
-        sifre.sendKeys("Far123456");
+        sifre.sendKeys("Password123");
         MyFunc.Wait(1);
         WebElement sifreTekrar = driver.findElement(By.xpath("//input[@id='rnufp2']"));
-        sifreTekrar.sendKeys("Far123456");
+        sifreTekrar.sendKeys("Password123");
         MyFunc.Wait(1);
         WebElement erkekRadio = driver.findElement(By.xpath("//input[@id='rngm']"));
         erkekRadio.click();
@@ -70,19 +70,19 @@ Doğru bilgiler girilerek hesap oluşturulduğunda, hesap doğrulama sayfasına 
         WebElement gunAc = driver.findElement(By.xpath("//select[@id='bd']"));
         gunAc.click();
         MyFunc.Wait(1);
-        WebElement gunSec = driver.findElement(By.xpath("//select[@id='bd']/option[@value='6']"));
+        WebElement gunSec = driver.findElement(By.xpath("//select[@id='bd']/option[@value='1']"));
         gunSec.click();
         MyFunc.Wait(1);
         WebElement ayAc = driver.findElement(By.xpath("//select[@id='bm']"));
         ayAc.click();
         MyFunc.Wait(1);
-        WebElement aySec = driver.findElement(By.xpath("//select[@id='bm']/option[@value='9']"));
+        WebElement aySec = driver.findElement(By.xpath("//select[@id='bm']/option[@value='1']"));
         aySec.click();
         MyFunc.Wait(1);
         WebElement yilAc = driver.findElement(By.xpath("//select[@id='by']"));
         yilAc.click();
         MyFunc.Wait(1);
-        WebElement yilSec = driver.findElement(By.xpath("//select[@id='by']/option[@value='1984']"));
+        WebElement yilSec = driver.findElement(By.xpath("//select[@id='by']/option[@value='1990']"));
         yilSec.click();
         MyFunc.Wait(1);
 
@@ -97,9 +97,6 @@ Doğru bilgiler girilerek hesap oluşturulduğunda, hesap doğrulama sayfasına 
         hesabim.click();
         MyFunc.Wait(1);
 
-        WebElement merhaba = driver.findElement(By.xpath("//li[@id='HM_p_v8']/a"));
-        merhaba.click();
-        MyFunc.Wait(1);
 
         WebElement onayYazisi = driver.findElement(By.xpath("//div[@class='my_i']"));
         Assert.assertTrue("Onaylama yazısı görünmedi",onayYazisi.getText().contains("E-posta adresinizi onaylayın"));
