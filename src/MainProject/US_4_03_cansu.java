@@ -18,6 +18,7 @@ public class US_4_03_cansu extends BaseDriver {
 //        3. "Giriş Yap" butonuna tekrar tıklar.
 
         driver.get("https://www.akakce.com/");
+        MyFunc.Wait(2);
 
         WebElement giris=driver.findElement(By.xpath("//*[@id='H_rl_v8']/a[2]"));  // giriş yapıldı
         giris.click();
@@ -28,24 +29,11 @@ public class US_4_03_cansu extends BaseDriver {
         entry.click();
 
         MyFunc.Wait(7);
-        WebElement uyari=driver.findElement(By.xpath("//p[text()='Lütfen e-posta adresinizi yazın.']"));
+        WebElement uyari=driver.findElement(By.cssSelector("[class='alertX t2']>p"));
         System.out.println("uyari.getText() = " + uyari.getText());
         MyFunc.Wait(5);
 
         Assert.assertTrue("Hatalı şifre ile giriş yapıldı.",uyari.getText().contains("Lütfen e-posta adresinizi yazın."));
-
-
-        BekleVeKapat();
-
-
-
-
-
-
-
-
-
-
 
         BekleVeKapat();
     }
