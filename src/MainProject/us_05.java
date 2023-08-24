@@ -69,7 +69,7 @@ public class us_05 extends BaseDriver {
         WebElement sonuc=driver.findElement(By.cssSelector("div[class='no-record']"));
         System.out.println(sonuc.getText());
 
-        Assert.assertTrue(sonuc.getText().contains("Kayıtlı siparişiniz bulunmuyor."));
+        Assert.assertTrue("Sipariş listesi hatalı göründü",sonuc.getText().contains("Kayıtlı siparişiniz bulunmuyor."));
 
 
 
