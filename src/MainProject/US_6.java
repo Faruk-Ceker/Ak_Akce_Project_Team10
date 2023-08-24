@@ -40,9 +40,7 @@ public class US_6 extends BaseDriver {
         MyFunc.Wait(2);
 
         WebElement mouseOver=driver.findElement(By.xpath("//a[@title='Hesabım']"));
-        Actions aksiyonlar=new Actions(driver);
-        Action aksiyon= aksiyonlar.moveToElement(mouseOver).build(); // elementin üzerine gel mouse üzerinde etkinleştir
-        aksiyon.perform(); // etki  yap etkinleştir.
+        mouseOver.click();
         MyFunc.Wait(2);
 
         WebElement hesabimBUTON=driver.findElement(By.xpath("//a[text()='Hesabım']"));    //hesabıma tıkladık
