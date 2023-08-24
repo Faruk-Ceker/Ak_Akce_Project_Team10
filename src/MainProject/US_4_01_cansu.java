@@ -9,7 +9,7 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.interactions.Action;
 import org.openqa.selenium.interactions.Actions;
 
-public class US_4_cansu extends BaseDriver {
+public class US_4_01_cansu extends BaseDriver {
     @Test
     public void Test1()
     {
